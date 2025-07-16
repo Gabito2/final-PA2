@@ -21,12 +21,10 @@ export class AutosTableComponent {
 
   onEdit(auto: Auto) {
     // TODO: Implementar redireccion a editar auto
-    this.router.navigate(['auto/edit', auto.id]);
   }
 
   onDelete(auto: Auto) {
     // TODO: Implementar eliminar auto, emitir evento
-    this.onDeleteAuto.emit(auto);
   }
 
 }
