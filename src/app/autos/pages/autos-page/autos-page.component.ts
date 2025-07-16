@@ -26,11 +26,14 @@ export class AutosPageComponent implements OnInit {
 
   onAdd() {
     // TODO: Implementar redireccion a crear auto
+    this.router.navigate(['auto/create']);
   }
 
   deleteAuto(auto: Auto) {
     // TODO: Implementar eliminar auto, invocar al servicio
-
+    this.autosService.deleteAuto(auto.id!).subscribe(() => {
+      this.autos = this.autos.filter(a => a.id !== auto.id);
+    });
   }
 
 }

@@ -2,17 +2,24 @@
   "autos": [
     {
       "id": "1",
-      "marca": "Ford",
-      "modelo": "Focus",
-      "anio": 2005,
+      "marca": "Nissan",
+      "modelo": "Sentra",
+      "anio": 2020,
       "fechaIngreso": "2025-01-03"
-
     },
     {
-      "id": "2",
-      "marca": "Chevrolet",
-      "modelo": "Cruze",
-      "fechaIngreso": "2025-02-01"
+      "id": "89e7",
+      "marca": "Toyota",
+      "modelo": "Corolla Cross",
+      "anio": 2021,
+      "fechaIngreso": "2025-07-17"
+    },
+    {
+      "id": "6be7",
+      "marca": "Toyota",
+      "modelo": "Yaris",
+      "anio": 2012,
+      "fechaIngreso": "2025-07-01"
     }
   ]
 }

@@ -40,7 +40,23 @@ export class AutoCreateEditPageComponent implements OnInit {
 
   private initAutoForm() {
     // Inicializar formulario con validaciones
-
+    this.autoForm = this.fb.group({
+      id: [''],
+      marca: ['', [Validators.required, Validators.minLength(3)]],
+      modelo: ['', [Validators.required, Validators.minLength(3)]],
+      anio: [
+        '',
+        [
+          Validators.required,
+          Validators.min(1900),
+          Validators.max(new Date().getFullYear())
+        ]
+      ],
+      fechaIngreso: [
+        '',
+        [Validators.required]
+      ]
+    });
   }
 
   private editAuto(id: string) {
@@ -48,7 +64,7 @@ export class AutoCreateEditPageComponent implements OnInit {
 
     // TODO: Obtener auto por id
     // TODO: Llenar formulario con auto [fillAutoForm(auto)]
-
+    this.autoService.getAutobyID(id).subscribe(auto => this.fillAutoForm(auto));
   }
 
   private fillAutoForm(auto: Auto) {
@@ -65,12 +81,16 @@ export class AutoCreateEditPageComponent implements OnInit {
 
     if (this.edit && this.autoForm.get('id')!.value !== null) {
       // TODO: Invocar el metodo updateAuto del servicio y redirigir a la lista de autos
-
+      this.autoService.updateAuto(this.auto).subscribe(() => {
+        this.router.navigate(['/']);
+      });
     } else {
       // create
       const { id, ...autoSinID } = this.auto; // Elimina el campo 'id' para que json-server lo autogenere
       // TODO: Invocar el metodo createAuto del servicio y redirigir a la lista de autos
-
+      this.autoService.createAuto(autoSinID).subscribe(() => {
+        this.router.navigate(['/']);
+      });
     }
   }
 

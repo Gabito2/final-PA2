@@ -20,11 +20,22 @@ export class AutosService {
   }
 
   // TODO: Crear metodo para obtener un auto por id
+    getAutobyID(id: string): Observable<Auto> {
+      return this.http.get<Auto>(`${this.url}/${id}`);
+    }
 
-  // TODO: Crear metodo para crear un auto
+    // TODO: Crear metodo para crear un auto
+    createAuto(auto: Auto): Observable<Auto> {
+      return this.http.post<Auto>(this.url, auto);
+    }
 
-  // TODO: Crear metodo para actualizar un auto
+    // TODO: Crear metodo para actualizar un auto
+    updateAuto(auto: Auto): Observable<Auto> {
+      return this.http.put<Auto>(`${this.url}/${auto.id}`, auto);
+    }
 
-  // TODO: Crear metodo para eliminar un auto
-
+    // TODO: Crear metodo para eliminar un auto
+    deleteAuto(id: number): Observable<void> {
+      return this.http.delete<void>(`${this.url}/${id}`);
+    }
 }
