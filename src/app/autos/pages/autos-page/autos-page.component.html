@@ -1,0 +1,8 @@
+<div class="container mt-5">
+  <button type="button" class="btn btn-primary mt-3 mb-3" (click)="onAdd()">
+    <i class="fas fa-plus"></i>
+    Nuevo
+  </button>
+  <autos-table [autos]="autos"
+                  (onDeleteAuto)="deleteAuto($event)"></autos-table>
+</div>

@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Marca</th>
+    <th scope="col">Modelo</th>
+    <th scope="col">Año</th>
+    <th scope="col">Ingreso</th>
+    <th scope="col">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let auto of autos">
+    <th scope="row">{{ auto.id }}</th>
+    <td>{{ auto.marca }}</td>
+    <td>{{ auto.modelo }}</td>
+    <td>{{ auto.anio }}</td>
+    <td>{{ auto.fechaIngreso }}</td>
+    <td>
+      <i class="fas fa-edit edit-icon" (click)="onEdit(auto)"></i>
+      <i class="fas fa-trash-alt ml-1 delete-icon" (click)="onDelete(auto)"></i>
+    </td>
+  </tr>
+  </tbody>
+</table>

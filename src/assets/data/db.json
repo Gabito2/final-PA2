@@ -1,0 +1,18 @@
+{
+  "autos": [
+    {
+      "id": "464e",
+      "marca": "Toyota",
+      "modelo": "Corolla Croos",
+      "anio": 2024,
+      "fechaIngreso": "2025-07-12"
+    },
+    {
+      "id": "2ace",
+      "marca": "Chevrolet",
+      "modelo": "Cruze",
+      "anio": 2014,
+      "fechaIngreso": "2025-07-13"
+    }
+  ]
+}
