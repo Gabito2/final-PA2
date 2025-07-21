@@ -3,31 +3,38 @@
     <div class="mb-3">
       <label for="marca" class="form-label">Marca</label>
       <input type="text" class="form-control" id="marca" formControlName="marca" placeholder="Ingrese marca">
-      <div *ngIf="autoForm.get('marca')?.invalid && (autoForm.get('marca')?.touched || autoForm.get('marca')?.dirty)"
-        class="text-danger">
-      </div>
+      @if(autoForm.invalid && autoForm.touched){
+        <div style="color: red">
+          La marca es requerida
+        </div>
+      }
     </div>
     <div class="mb-3">
       <label for="modelo" class="form-label">Modelo</label>
       <input type="text" class="form-control" id="modelo" formControlName="modelo" placeholder="Ingrese modelo">
-      <div *ngIf="autoForm.get('modelo')?.invalid && (autoForm.get('modelo')?.touched || autoForm.get('modelo')?.dirty)"
-        class="text-danger">
-      </div>
+      @if (autoForm.invalid && autoForm.touched) {
+        <div style="color: red">
+          El modelo es requerido
+        </div>
+      }
     </div>
     <div class="mb-3">
       <label for="anio" class="form-label">Año</label>
       <input type="number" class="form-control" id="anio" formControlName="anio" placeholder="2012">
-      <div *ngIf="autoForm.get('anio')?.invalid && (autoForm.get('anio')?.touched || autoForm.get('anio')?.dirty)"
-        class="text-danger">
-      </div>
+      @if (autoForm.invalid && autoForm.touched){
+        <div style="color: red">
+          El anio es requerido
+        </div>
+      }
     </div>
     <div class="mb-3">
       <label for="fechaIngreso" class="form-label">Ingreso</label>
       <input type="date" class="form-control" id="fechaIngreso" formControlName="fechaIngreso" placeholder="01/01/2012">
-      <div
-        *ngIf="autoForm.get('fechaIngreso')?.invalid && (autoForm.get('fechaIngreso')?.touched || autoForm.get('fechaIngreso')?.dirty)"
-        class="text-danger">
-      </div>
+      @if (autoForm.invalid && autoForm.touched){
+        <div style="color: red">
+          La fecha de ingreso es requerida
+        </div>
+      }
     </div>
     <br>
     <hr>

@@ -1,13 +1,6 @@
 {
   "autos": [
     {
-      "id": "1",
-      "marca": "Nissan",
-      "modelo": "Sentra",
-      "anio": 2020,
-      "fechaIngreso": "2025-01-03"
-    },
-    {
       "id": "89e7",
       "marca": "Toyota",
       "modelo": "Corolla Cross",
@@ -17,9 +10,16 @@
     {
       "id": "6be7",
       "marca": "Toyota",
-      "modelo": "Yaris",
+      "modelo": "Etios",
       "anio": 2012,
       "fechaIngreso": "2025-07-01"
+    },
+    {
+      "id": "6bd9",
+      "marca": "Chevrolet",
+      "modelo": "S10",
+      "anio": 2012,
+      "fechaIngreso": "2025-07-15"
     }
   ]
 }

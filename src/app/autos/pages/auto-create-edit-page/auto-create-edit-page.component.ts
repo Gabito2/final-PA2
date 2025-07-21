@@ -3,13 +3,12 @@ import { Auto } from '../../interfaces/auto.interface';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AutosService } from '../../services/autos.service';
-import {NgIf} from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-auto-create-edit-page',
   imports: [
-    ReactiveFormsModule,
-    NgIf
+    ReactiveFormsModule
   ],
   templateUrl: './auto-create-edit-page.component.html',
   styleUrl: './auto-create-edit-page.component.scss'
